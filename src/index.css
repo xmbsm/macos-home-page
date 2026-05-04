@@ -126,7 +126,7 @@ html body #root .rt-tooltip[data-tooltip-id="dock-tooltip"] .rt-tooltip-content 
 @media (max-width: 640px) {
   html,
   body {
-    background-image: var(--wallpaper-url, url("/images/wallpaper-01.jpg"));
+    background-image: var(--wallpaper-url, url("/images/wallpaper1.jpg"));
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
