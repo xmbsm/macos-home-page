@@ -209,234 +209,119 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: "/images/gal2.webp",
+    img: "/images/wallpaper1.jpg",
   },
   {
     id: 2,
-    img: "/images/gal3.jpg",
+    img: "/images/wallpaper2.jpg",
   },
   {
     id: 3,
-    img: "/images/gal5.webp",
+    img: "/images/wallpaper3.jpg",
   },
   {
     id: 4,
-    img: "/images/gal4.webp",
+    img: "/images/wallpaper4.jpg",
   },
   {
     id: 5,
-    img: "/images/gal1.webp",
+    img: "/images/wallpaper5.jpg",
   },
   {
     id: 6,
-    img: "/images/gal6.webp",
+    img: "/images/wallpaper6.jpg",
   },
   {
     id: 7,
-    img: "/images/wallpaper.webp",
+    img: "/images/wallpaper7.jpg",
   },
   {
     id: 8,
-    img: "/images/gal7.webp",
+    img: "/images/wallpaper8.jpg",
   },
   {
     id: 9,
-    img: "/images/gal8.jpg",
+    img: "/images/wallpaper9.jpg",
   },
   {
     id: 10,
-    img: "/images/gal15.webp",
+    img: "/images/wallpaper10.jpg",
   },
   {
     id: 11,
-    img: "/images/gal10.jpg",
-  },
-  {    
-    id: 12,
-    img: "/images/gal11.jpg",
-  },
-  {
-    id: 13,
-    img: "/images/gal12.jpg",
-  },
-  {
-    id: 14,
-    img: "/images/gal13.webp",
-  },
-  {
-    id: 15,
-    img: "/images/gal14.webp",
-  },
-  {
-    id: 16,
-    img: "/images/wallpaper-01.jpg",
-  },
-  {
-    id: 17,
-    img: "/images/gal9.webp",
-  },
-  {
-    id: 18,
-    img: "/images/gal16.webp",
-  }
-];
-
-const songs = [
-  
-  {
-    id: 1,
-    title: "I Really Want to Stay at Your House",
-    author: "Rosa Walton (with Hallie Coggins)",
-    src: "/audio/lucysong.mp3",
-    cover: "/images/lucysong.jpg",
-  },
-  {
-    id: 2,
-    title: "City Ruins - Rays of Light",
-    author: "NieR: Automata OST",
-    src: "/audio/City Ruins - Rays of Light (NieR_Automata Original Soundtrack)Audio.mp3",
-    cover: "/images/city.webp",
-  },
-  {
-    id: 3,
-    title: "Feel It",
-    author: "D4vd",
-    src: "/audio/feelit.mp3",
-    cover: "/images/feelit.jpg",
-  },
-  {
-    id: 4,
-    title: "Ma Meilleure Ennemie",
-    author: "Arcane OST",
-    src: "/audio/arcane.mp3",
-    cover: "/images/arcane.jpg",
-  },
-  {
-    id: 5,
-    title: "Fire Again",
-    author: "VALORANT",
-    src: "/audio/fireagain.mp3",
-    cover: "/images/fireagain.jpg",
-  },
-  {
-    id: 6,
-    title: "Die For You",
-    author: "VALORANT",
-    src: "/audio/dieforyou.mp3",
-    cover: "/images/dieforyou.jpg",
-  },
-  {
-    id: 7,
-    title: "Ticking Away",
-    author: "VALORANT",
-    src: "/audio/Ticking Away.mp3",
-    cover: "/images/tickingAway.jpg",
-  },
-  {
-    id: 8,
-    title: "Be a flower",
-    author: "Ryokuoushoku Shakai",
-    src: "/audio/Be a flower.mp3",
-    cover: "/images/maomao.jpg",
-  },
-  {
-    id: 9,
-    title: "Anytime Anywhere",
-    author: "Milet",
-    src: "/audio/Anytime Anywhere.mp3",
-    cover: "/images/anytimeanywhere.jpg",
-  },
-  {
-    id: 10,
-    title: "MAGIC",
-    author: "Ado",
-    src: "/audio/ADO_magic.mp3",
-    cover: "/images/magic.jpg",
-  },
-  {
-    id: 11,
-    title: "Idol",
-    author: "YASOBI",
-    src: "/audio/YASOBI_oshi_s1.mp3",
-    cover: "/images/Oshi_i_s1.jpg",
+    img: "/images/wallpaper11.jpg",
   },
   {
     id: 12,
-    title: "Test Me",
-    author: "Chanmina",
-    src: "/audio/oshi_s3.mp3",
-    cover: "/images/Oshi_i_s3.jpg",
+    img: "/images/wallpaper12.jpg",
   },
   {
     id: 13,
-    title: "Burning",
-    author: "Hitsujibungaku",
-    src: "/audio/oshi_s2.mp3",
-    cover: "/images/Oshi_i_s2.jpg",
+    img: "/images/wallpaper13.jpg",
   },
   {
     id: 14,
-    title: "The Path to Becoming a Hero",
-    author: "ZZZ Miyabi's OST",
-    src: "/audio/The Path to Becoming a Hero.mp3",
-    cover: "/images/miyabi.jpg",
+    img: "/images/wallpaper14.jpg",
   },
   {
     id: 15,
-    title: "Dandelion",
-    author: "Go!go!vanillas",
-    src: "/audio/Dandelion.mp3",
-    cover: "/images/dandelion.jpg",
+    img: "/images/wallpaper15.jpg",
   },
   {
     id: 16,
-    title: "Abunaikioku (feat. Aoi Koga)",
-    author: "Masayuki Suzuki",
-    src: "/audio/kaguya.mp3",
-    cover: "/images/kaguya.jpg",
+    img: "/images/wallpaper16.jpg",
   },
   {
     id: 17,
-    title: "Fukashigi no KARTE",
-    author: "Mai Sakurajima (VA: Sami Seto)",
-    src: "/audio/Fukashigi no KARTE_Mai Sakurajima_CVAsami Seto.mp3",
-    cover: "/images/mai.jpg",
+    img: "/images/wallpaper18.jpg",
   },
   {
     id: 18,
-    title: "Kiminosei",
-    author: "The Peggies",
-    src: "/audio/kiminosei_the peggies.mp3",
-    cover: "/images/kimi.jpg",
-  },  
+    img: "/images/wallpaper20.jpg",
+  },
   {
     id: 19,
-    title: "RED and BLUE",
-    author: "Kaguya Shinomiya (VA: Aoi Koga)",
-    src: "/audio/kaguya2.mp3",
-    cover: "/images/kaguya2.jpg",
+    img: "/images/wallpaper21.jpg",
   },
-  
   {
     id: 20,
-    title: "Voices of The Chord (feat. Greta G)",
-    author: "Tom Dabrowski",
-    src: "/audio/86.mp3",
-    cover: "/images/86.jpg",
+    img: "/images/wallpaper22.jpg",
   },
   {
     id: 21,
-    title: "Odoriko",
-    author: "Vaundy",
-    src: "/audio/odoriko.mp3",
-    cover: "/images/odorika.jpg",
+    img: "/images/wallpaper23.jpg",
   },
   {
     id: 22,
-    title: "Something Super Sweet",
-    author: "Rory Webley",
-    src: "/audio/something-super-sweet.mp3",
-    cover: "/images/sweet.jpg",
+    img: "/images/wallpaper24.jpg",
+  },
+  {
+    id: 23,
+    img: "/images/wallpaper25.jpg",
+  },
+];
+
+const songs = [
+  {
+    id: 1,
+    title: "Black Sheep",
+    author: "Gin Wigmore",
+    src: "/audio/Black_Sheep.mp3",
+    cover: "/images/music_blacksheep.jpg",
+  },
+  {
+    id: 2,
+    title: "两个寂寞",
+    author: "陶晶莹",
+    src: "/audio/两个寂寞.mp3",
+    cover: "/images/music_lgjm.jpg",
+  },
+  {
+    id: 3,
+    title: "银河列车",
+    author: "深海呼吸",
+    src: "/audio/银河列车.mp3",
+    cover: "/images/music_yhlc.jpg",
   },
 ];
 
