@@ -93,7 +93,7 @@ const dockApps = [
   {
     id: "trash", // unique id to avoid duplicate keys in Dock
     name: "废纸篓",
-    icon: "trash.webp",
+    icon: "trash.svg",
     canOpen: true,
     action: "trash",
   },
