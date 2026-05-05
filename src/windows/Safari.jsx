@@ -33,7 +33,7 @@ const Safari = () => {
       </div>
       <div className='blog'>
         <h2>
-          我的开发者博客
+          博客
         </h2>
         <div className='space-y-8'>
           {blogPosts.map(({id, image, title, date, link}) => (
