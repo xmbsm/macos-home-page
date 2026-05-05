@@ -127,10 +127,10 @@ const NavBar = () => {
   const handleIconClick = ({ type, action }) => {
     if (!type) return;
     
-    openWindow(type);
-    
     if (action === 'about') {
-      setActiveLocation(locations.about);
+      openWindow('about');
+    } else {
+      openWindow(type);
     }
     setIsMobileMenuOpen(false);
   };

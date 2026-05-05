@@ -13,7 +13,8 @@ const Safari = lazy(() => import('./windows/Safari.jsx'))
 const Terminal = lazy(() => import('./windows/Terminal.jsx'))
 const Text = lazy(() => import('./windows/Text.jsx'))
 const Image = lazy(() => import('./windows/Image.jsx'))
-const Contact = lazy(() => import('./windows/Contact.jsx'))
+const Sucai = lazy(() => import('./windows/Sucai.jsx'))
+const About = lazy(() => import('./windows/About.jsx'))
 const Photos = lazy(() => import('./windows/Photos.jsx'))
 const Music = lazy(() => import('./windows/Music.jsx'))
 const Game = lazy(() => import('./windows/Game.jsx'))
@@ -55,7 +56,8 @@ const App = () => {
       import('./windows/Terminal.jsx');
       import('./windows/Text.jsx');
       import('./windows/Image.jsx');
-      import('./windows/Contact.jsx');
+      import('./windows/Sucai.jsx');
+      import('./windows/About.jsx');
       import('./windows/Photos.jsx');
       import('./windows/Music.jsx');
       import('./windows/Game.jsx');
@@ -96,7 +98,8 @@ const App = () => {
         {windows['txtfile']?.isOpen && <Suspense fallback={null}><Text /></Suspense>}
         {windows['finder']?.isOpen && <Suspense fallback={null}><Finder /></Suspense>}
         {windows['portfolio']?.isOpen && <Suspense fallback={null}><Portfolio /></Suspense>}
-        {windows['contact']?.isOpen && <Suspense fallback={null}><Contact /></Suspense>}
+        {windows['about']?.isOpen && <Suspense fallback={null}><About /></Suspense>}
+        {windows['contact']?.isOpen && <Suspense fallback={null}><Sucai /></Suspense>}
         {windows['photos']?.isOpen && <Suspense fallback={null}><Photos /></Suspense>}
         {windows['music']?.isOpen && <Suspense fallback={null}><Music /></Suspense>}
         {windows['game']?.isOpen && <Suspense fallback={null}><Game /></Suspense>}

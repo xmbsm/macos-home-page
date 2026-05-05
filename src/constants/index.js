@@ -6,8 +6,8 @@ const navLinks = [
   },
   {
     id: 3,
-    name: "联系",
-    type: "contact",
+    name: "关于",
+    type: "about",
   },
 ];
 
@@ -29,8 +29,7 @@ const navIcons = [
   {
     id: 4,
     img: "/icons/user.svg",
-    type: "finder",
-    action: "about",
+    type: "about",
   },
 
   {
@@ -62,9 +61,10 @@ const dockApps = [
   },
   {
     id: "contact",
-    name: "联系", // or "Get in touch"
-    icon: "contact.svg",
+    name: "素材站",
+    icon: "sucai.svg",
     canOpen: true,
+    tooltip: "素材",
   },
   {
     id: "terminal",
@@ -574,85 +574,7 @@ const ABOUT_LOCATION = {
   name: "关于我",
   icon: "/icons/info.svg",
   kind: "folder",
-  children: [
-    {
-      id: 1,
-      name: "me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-10 left-5",
-      imageUrl: "/images/swastik_2.jpeg",
-    },
-    {
-      id: 2,
-      name: "官网",
-      icon: "/images/blog.svg",
-      kind: "file",
-      fileType: "url",
-      href: "https://kusheji.com/",
-      position: "top-60 left-50",
-    },
-    {
-      id: 3,
-      name: "xmbsm.github",
-      icon: "/images/plain.png",
-      kind: "file",
-      fileType: "fig",
-      href: "https://github.com/",
-      position: "top-60 left-95",
-    },
-    {
-      id: 4,
-      name: "AboutMe.txt",
-      icon: "/images/txt.png",
-      kind: "file",
-      fileType: "txt",
-      position: "top-18 left-50",
-      subtitle: "Meet the Developer Behind the Code",
-      image: "/images/swastik.webp",
-      description: [
-        "待更新"
-      ],
-    },
-    {
-      id: 5,
-      name: "qtx.txt",
-      icon: "/images/txt.png",
-      kind: "file",
-      fileType: "txt",
-      position: "top-10 left-95",
-      subtitle: "Tech Stack",
-      description: [
-        "⚙️ Frontend:",
-        "React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, GSAP",
-        "",
-        "🧠 State Management:",
-        "Redux, Redux Toolkit, Zustand",
-        "",
-        "🛠️ Tools & Build Systems:",
-        "Vite, npm, Git, GitHub, Axios, Jest, Figma",
-        "",
-        "🎨 UI & Workflow:",
-        "Responsive Design, Component Architecture, Animations, Micro-interactions, Performance Optimization, Accessibility Basics",
-        "",
-        "📡 APIs & Data:",
-        "REST APIs, TMDB API, JSON handling, Async data fetching",
-        "",
-        "📱 Other / Supporting:",
-        "Python, SQL, Machine Learning, React Native",
-      ],
-    },
-    {
-      id: 6,
-      name: "me2.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-55 left-5",
-      imageUrl: "/images/swastik.webp",
-    },
-  ],
+  children: [],
 };
 
 const TRASH_LOCATION = {
@@ -712,7 +634,6 @@ const TRASH_LOCATION = {
 
 export const locations = {
   work: WORK_LOCATION,
-  about: ABOUT_LOCATION,
   trash: TRASH_LOCATION,
 };
 
@@ -721,6 +642,7 @@ const INITIAL_Z_INDEX = 1000;
 const WINDOW_CONFIG = {
   finder: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
   portfolio: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
+  about: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
   contact: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
   safari: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
   photos: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },

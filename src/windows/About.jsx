@@ -6,15 +6,15 @@ import { Mail } from 'lucide-react/dist/esm/icons'
 import React from 'react'
 import clsx from 'clsx'
 
-const Contact = () => {
-  const isMaximized = useWindowStore(state => state.windows.contact?.isMaximized);
-  const email = 'swastik15.sharma.work@gmail.com'
+const About = () => {
+  const isMaximized = useWindowStore(state => state.windows.about?.isMaximized);
+  const email = '1@kusheji.com'
   
   return (
     <>
       <div id='window-header' className='flex items-center justify-between window-drag-handle'>
-        <WindowControls target="contact" />
-        <h2 className='flex-1 text-center'>联系我</h2>
+        <WindowControls target="about" />
+        <h2 className='flex-1 text-center'>关于</h2>
         <a
           href={`mailto:${email}`}
           title={`Email: ${email}`}
@@ -69,7 +69,7 @@ const Contact = () => {
   )
 }
 
-const ContactWindow = WindowWrapper(Contact, 'contact')
+const AboutWindow = WindowWrapper(About, 'about')
 
-export { Contact }
-export default ContactWindow;
+export { About }
+export default AboutWindow;

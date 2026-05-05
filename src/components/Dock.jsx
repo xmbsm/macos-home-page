@@ -7,7 +7,7 @@ const Dock = React.memo(() => {
   const mobileIcons = [
     { id: 'portfolio', name: '作品集', canOpen: true },
     { id: 'music', name: '音乐', canOpen: true },
-    { id: 'contact', name: '联系', canOpen: true },
+    { id: 'contact', name: '素材站', canOpen: true },
     { id: 'safari', name: '文章', canOpen: true },
     { id: 'photos', name: '相册', canOpen: true },
   ];
@@ -246,7 +246,7 @@ const Dock = React.memo(() => {
               transition: 'none'
             } : {}}
           >
-            {dockApps.map(({id, name, icon, canOpen, action}) => (
+            {dockApps.map(({id, name, icon, canOpen, action, tooltip: tooltipText}) => (
               <div
                 key={id}
                 className='relative flex justify-center'
@@ -273,7 +273,7 @@ const Dock = React.memo(() => {
                     const position = iconPositions.current[name] || e.currentTarget.getBoundingClientRect();
                     setTooltip({
                       show: true,
-                      text: name,
+                      text: tooltipText || name,
                       x: position.left + (position.width || e.currentTarget.offsetWidth) / 2,
                       y: position.top - 28
                     });
