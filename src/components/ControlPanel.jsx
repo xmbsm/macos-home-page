@@ -100,19 +100,6 @@ const ControlPanel = React.memo(() => {
           </div>
           
           <div style={{ background: '#f3f4f6', borderRadius: '12px', padding: '12px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <div style={{ width: '40px', height: '40px', background: '#3b82f6', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                <circle cx="12" cy="12" r="3" />
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-              </svg>
-            </div>
-            <div>
-              <p style={{ fontSize: '12px', fontWeight: '600', color: '#1f2937', margin: '0' }}>Bluetooth</p>
-              <p style={{ fontSize: '10px', color: '#6b7280', margin: '0' }}>On</p>
-            </div>
-          </div>
-          
-          <div style={{ background: '#f3f4f6', borderRadius: '12px', padding: '12px', display: 'flex', alignItems: 'center', gap: '12px' }}>
             <div style={{ width: '40px', height: '40px', background: '#10b981', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
                 <path d="M12 18V6m0 0l-3 3m3-3l3 3" />
@@ -120,23 +107,11 @@ const ControlPanel = React.memo(() => {
               </svg>
             </div>
             <div>
-              <p style={{ fontSize: '12px', fontWeight: '600', color: '#1f2937', margin: '0' }}>AirDrop</p>
-              <p style={{ fontSize: '10px', color: '#6b7280', margin: '0' }}>Contacts</p>
-            </div>
-          </div>
-          
-          <div style={{ background: '#f3f4f6', borderRadius: '12px', padding: '12px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <div style={{ width: '40px', height: '40px', background: '#f59e0b', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M8 15s1.5-2 4-2 4 2 4 2" />
-              </svg>
-            </div>
-            <div>
               <p style={{ fontSize: '12px', fontWeight: '600', color: '#1f2937', margin: '0' }}>Light</p>
               <p style={{ fontSize: '10px', color: '#6b7280', margin: '0' }}>Mode</p>
             </div>
           </div>
+          
         </div>
         
         <div style={{ background: '#f3f4f6', borderRadius: '12px', padding: '16px', marginBottom: '16px' }}>
