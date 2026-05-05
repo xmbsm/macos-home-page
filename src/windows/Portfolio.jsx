@@ -176,7 +176,7 @@ const Portfolio = () => {
         height: '100%',
         overflowY: 'auto',
         overflowX: 'hidden',
-        padding: '32px 36px 80px 36px',
+        padding: '45px 36px 80px 36px',
         background: '#fff',
       }}>
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>

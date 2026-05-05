@@ -120,6 +120,12 @@ const NavBar = () => {
       setActiveLocation(locations.work);
     }
 
+    if (type === 'sucai') {
+      window.open('https://sucai.kusheji.com/', '_blank');
+      setIsMobileMenuOpen(false);
+      return;
+    }
+
     openWindow(type);
     setIsMobileMenuOpen(false);
   };

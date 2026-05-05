@@ -6,8 +6,8 @@ const navLinks = [
   },
   {
     id: 3,
-    name: "关于",
-    type: "about",
+    name: "素材",
+    type: "sucai",
   },
 ];
 
@@ -87,7 +87,7 @@ const dockApps = [
   {
     id: "game",
     name: "游戏",
-    icon: "game.webp",
+    icon: "game.svg",
     canOpen: true,
   },
   {
@@ -368,7 +368,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "点击访问",
-          icon: "/images/blog.svg",
+          icon: "/images/website.svg",
           kind: "file",
           fileType: "url",
           href: "https://sucai.kusheji.com/",
@@ -411,7 +411,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "小酷字体",
-          icon: "/images/blog.svg",
+          icon: "/images/website.svg",
           kind: "file",
           fileType: "url",
           href: "https://ziti.kusheji.com/",
@@ -455,7 +455,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "kusheji.com",
-          icon: "/images/blog.svg",
+          icon: "/images/website.svg",
           kind: "file",
           fileType: "url",
           href: "https://kusheji.com/",
@@ -505,7 +505,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "酷设计",
-          icon: "/images/blog.svg",
+          icon: "/images/website.svg",
           kind: "file",
           fileType: "url",
           href: "https://kusheji.com/",
@@ -548,7 +548,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "知识库",
-          icon: "/images/blog.svg",
+          icon: "/images/website.svg",
           kind: "file",
           fileType: "url",
           href: "https://kusheji.com/",
@@ -621,9 +621,9 @@ const TRASH_LOCATION = {
       imageUrl: "/images/trash-2.jpg",
     },
     {
-      id: 5,
-      name: "kusheji.com",
-      icon: "/images/blog.svg",
+        id: 5,
+        name: "kusheji.com",
+        icon: "/images/website.svg",
       kind: "file",
       fileType: "url",
       href: "https://kusheji.com/",
