@@ -102,25 +102,11 @@ const dockApps = [
 const blogPosts = [
   
   {
-    id: 2,
-    date: "July 5, 2025",
-    title: "Mastering Frontend Performance: Speed Up Your Website",
-    image: "/images/blog3.png",
-    link: "#",
-  },
-  {
-    id: 1,
-    date: "June 10, 2025",
-    title:"Developing Dynamic Web Experiences Using React",
-    image: "/images/blog1.png",
-    link: "#",
-  },
-  {
-    id: 3,
-    date: "May 20, 2025",
-    title: "CSS Animations: Bringing Your Website to Life",
-    image: "/images/blog2.png",
-    link: "#",
+    id: 4,
+    date: "2026年5月6日",
+    title: "本站开源了！欢迎Star",
+    image: "/images/portfolio.svg",
+    link: "https://github.com/xmbsm/macos-home-page",
   },
 ];
 

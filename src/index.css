@@ -746,11 +746,14 @@ html body #root .rt-tooltip[data-tooltip-id="dock-tooltip"] .rt-tooltip-content 
     }
 
     .blog {
-      @apply bg-white p-10 max-w-3xl mx-auto overflow-y-auto;
-      max-height: calc(100% - 40px);
+      @apply bg-white p-10 max-h-[calc(100%-40px)] overflow-y-auto;
 
       h2 {
-        @apply text-xl font-bold text-pink-600 mb-10;
+        @apply text-xl font-bold text-gray-900 mb-10;
+      }
+
+      .blog-content {
+        @apply max-w-3xl mx-auto;
       }
 
       .blog-post {

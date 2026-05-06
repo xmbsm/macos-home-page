@@ -35,25 +35,27 @@ const Safari = () => {
         <h2>
           博客
         </h2>
-        <div className='space-y-8'>
-          {blogPosts.map(({id, image, title, date, link}) => (
-            <div key={id} className='blog-post'>
-              <div className='col-span-2 '>
-                <img 
-                  src={image}
-                  alt={title}
-                  loading='lazy'
-                />
+        <div className='blog-content'>
+          <div className='space-y-8'>
+            {blogPosts.map(({id, image, title, date, link}) => (
+              <div key={id} className='blog-post'>
+                <div className='col-span-2 '>
+                  <img 
+                    src={image}
+                    alt={title}
+                    loading='lazy'
+                  />
+                </div>
+                <div className='content'>
+                  <p>{date}</p>
+                  <h3>{title}</h3>
+                  <a href={link} target='_blank' rel='noopener noreferrer'>
+                    点击查看 <MoveRight className='icon-hover' />
+                  </a>
+                </div>
               </div>
-              <div className='content'>
-                <p>{date}</p>
-                <h3>{title}</h3>
-                <a href={link} target='_blank' rel='noopener noreferrer'>
-                  Check out the full post <MoveRight className='icon-hover' />
-                </a>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </>
