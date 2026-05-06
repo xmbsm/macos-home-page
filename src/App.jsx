@@ -22,9 +22,6 @@ const Trash = lazy(() => import('./windows/Trash.jsx'))
 const VSCode = lazy(() => import('./windows/VSCode.jsx'))
 const Wallpaper = lazy(() => import('./windows/Wallpaper.jsx'))
 
-const Analytics = lazy(() => import('@vercel/analytics/react').then(m => ({ default: m.Analytics })));
-const SpeedInsights = lazy(() => import('@vercel/speed-insights/react').then(m => ({ default: m.SpeedInsights })));
-
 const App = () => {
   const { windows } = useWindowStore();
   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' && window.innerWidth <= 640);
@@ -110,12 +107,6 @@ const App = () => {
         <Suspense fallback={null}><Home /></Suspense>
       </main>
       
-      {!isMobile && (
-        <Suspense fallback={null}>
-          <Analytics />
-          <SpeedInsights />
-        </Suspense>
-      )}
     </>
   )
 }

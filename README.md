@@ -63,7 +63,7 @@ Build output will be in the `dist/` directory.
 - **Animations**: GSAP with Draggable plugin
 - **State Management**: Zustand
 - **Icons**: Lucide React
-- **Fonts**: Google Fonts (Georama, Roboto Mono)
+- **Fonts**: Google Fonts (Georama, Roboto Mono) via USTC mirror (fonts.loli.net)
 
 ## 📁 Project Structure
 ```
