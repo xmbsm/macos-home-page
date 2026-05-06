@@ -35,6 +35,12 @@ const useWindowStore = create(
         win.zIndex = state.nextZIndex++;
       }
     }),
+    resizeWindow: (windowKey, width, height) => set((state) => {
+      const win = state.windows[windowKey];
+      if (!win) return;
+      win.width = width;
+      win.height = height;
+    }),
   }))
 );
 

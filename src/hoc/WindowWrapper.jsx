@@ -1,18 +1,24 @@
 import useWindowStore from '#store/window'
 import { useGSAP } from '@gsap/react';
-import React, { useLayoutEffect, useRef, useState as useReactState, useEffect as useReactEffect } from 'react'
+import React, { useLayoutEffect, useRef, useState as useReactState, useEffect as useReactEffect, useCallback } from 'react'
 import { createPortal } from 'react-dom'
 import gsap from 'gsap';
 import Draggable from 'gsap/Draggable';
+
+const MIN_WINDOW_WIDTH = 400;
+const MIN_WINDOW_HEIGHT = 300;
 
 const WindowWrapper = (Component, windowKey) => {
 
   const Wrapped = React.memo((props) => {
     const focusWindow = useWindowStore(state => state.focusWindow);
+    const resizeWindow = useWindowStore(state => state.resizeWindow);
     const windowState = useWindowStore(state => state.windows[windowKey]);
-    const { isOpen, isMaximized, zIndex } = windowState || {};
+    const { isOpen, isMaximized, zIndex, width: storedWidth, height: storedHeight } = windowState || {};
     const ref = useRef(null);
     const portalRef = useRef(null);
+    const isResizingRef = useRef(false);
+    const resizeStartRef = useRef({ x: 0, y: 0, width: 0, height: 0 });
     
     // Initialize state with correct value from the start
     const [isMobile, setIsMobile] = useReactState(() => {
@@ -67,6 +73,55 @@ const WindowWrapper = (Component, windowKey) => {
         ease: 'power3.out'
       })
     }, [isOpen, isMobile]);
+
+    const handleResizeMouseDown = useCallback((e) => {
+      if (isMobile || isMaximized || !isOpen) return;
+      
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const el = ref.current;
+      if (!el) return;
+
+      isResizingRef.current = true;
+      resizeStartRef.current = {
+        x: e.clientX,
+        y: e.clientY,
+        width: el.offsetWidth,
+        height: el.offsetHeight
+      };
+
+      focusWindow(windowKey);
+
+      const handleMouseMove = (e) => {
+        if (!isResizingRef.current) return;
+        
+        const deltaX = e.clientX - resizeStartRef.current.x;
+        const deltaY = e.clientY - resizeStartRef.current.y;
+        
+        const newWidth = Math.max(MIN_WINDOW_WIDTH, resizeStartRef.current.width + deltaX);
+        const newHeight = Math.max(MIN_WINDOW_HEIGHT, resizeStartRef.current.height + deltaY);
+        
+        el.style.width = `${newWidth}px`;
+        el.style.height = `${newHeight}px`;
+      };
+
+      const handleMouseUp = () => {
+        if (!isResizingRef.current) return;
+        
+        isResizingRef.current = false;
+        const el = ref.current;
+        if (el) {
+          resizeWindow(windowKey, el.offsetWidth, el.offsetHeight);
+        }
+        
+        document.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener('mouseup', handleMouseUp);
+      };
+
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseup', handleMouseUp);
+    }, [isMobile, isMaximized, isOpen, focusWindow, windowKey, resizeWindow]);
 
     // draggable handling (disable when maximized or closed or on mobile)
     useGSAP(() => {
@@ -213,10 +268,20 @@ const WindowWrapper = (Component, windowKey) => {
       <section 
         id={windowKey} 
         ref={ref} 
-        style={{ zIndex: zIndex }}
+        style={{ 
+          zIndex: zIndex,
+          width: storedWidth ? `${storedWidth}px` : undefined,
+          height: storedHeight ? `${storedHeight}px` : undefined,
+        }}
         className='window-root'
         onClick={() => focusWindow(windowKey)}>
           <Component {...props} />
+          {!isMaximized && (
+            <div 
+              className="window-resize-handle"
+              onMouseDown={handleResizeMouseDown}
+            />
+          )}
       </section>
     ) : null;
 
