@@ -38,12 +38,14 @@ const Sucai = () => {
           </svg>
         </button>
       </div>
-      <iframe
-        src="https://sucai.kusheji.com/"
-        title="素材"
-        className="w-full h-full border-0"
-        allow="fullscreen"
-      />
+      <div style={{ height: 'calc(100% - 48px)' }}>
+        <iframe
+          src="https://sucai.kusheji.com/"
+          title="素材"
+          className="w-full h-full border-0"
+          allow="fullscreen"
+        />
+      </div>
     </>
   )
 }
