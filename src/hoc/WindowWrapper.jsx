@@ -82,7 +82,7 @@ const WindowWrapper = (Component, windowKey) => {
       const [ instance ] = Draggable.create(el, {
         onPress: () => focusWindow(windowKey),
         trigger: el.querySelector('.window-drag-handle'),
-        ignore: "input[type='range'], button, .sliders",
+        ignore: "input, button, .sliders",
         cursor: "grab",
         activeCursor: "grabbing"
       })

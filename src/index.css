@@ -742,6 +742,12 @@ html body #root .rt-tooltip[data-tooltip-id="dock-tooltip"] .rt-tooltip-content 
 
       input {
         @apply placeholder:text-gray-400;
+        pointer-events: auto !important;
+        user-select: auto !important;
+      }
+
+      input:focus {
+        outline: none;
       }
     }
 
