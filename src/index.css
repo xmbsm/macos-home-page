@@ -1355,6 +1355,35 @@ html body #root .rt-tooltip[data-tooltip-id="dock-tooltip"] .rt-tooltip-content 
       overflow-y: auto !important;
       max-height: calc(100% - 40px) !important;
       padding: 1rem 1rem 80px 1rem !important;
+
+      .blog-content {
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+
+      .blog-post {
+        display: grid !important;
+        grid-template-columns: 35% 1fr !important;
+        gap: 0.5rem !important;
+        align-items: center !important;
+
+        > div:first-child {
+          width: 100% !important;
+          grid-column: 1 !important;
+        }
+
+        img {
+          width: 100% !important;
+          height: auto !important;
+          display: block !important;
+          object-fit: contain !important;
+        }
+
+        .content {
+          grid-column: 2 !important;
+          width: 100% !important;
+        }
+      }
     }
 
     #terminal {

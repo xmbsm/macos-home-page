@@ -9,14 +9,14 @@ const Safari = () => {
     <>
       <div id='window-header' className='window-drag-handle'>
         <WindowControls target="safari" />
-        <PanelLeft className='ml-10 icon' />
-        <div className='flex items-center gap-1 ml-5'>
+        <PanelLeft className='hidden sm:block ml-10 icon' />
+        <div className='hidden sm:flex items-center gap-1 ml-5'>
           <ChevronLeft className='icon' />
           <ChevronRight className='icon' />
         </div>
         <div className='flex-1 flex-center gap-3'>
-          <ShieldHalf className='icon' />
-          <div className='search'>
+          <ShieldHalf className='hidden sm:block icon' />
+          <div className='hidden sm:flex search'>
             <Search className='icon' />
             <input 
               type='text' 
@@ -25,7 +25,10 @@ const Safari = () => {
             />
           </div>
         </div>
-        <div className='flex items-center gap-5'>
+        <button className='sm:hidden p-1' aria-label='搜索'>
+          <Search className='icon' />
+        </button>
+        <div className='hidden sm:flex items-center gap-5'>
           <Share className='icon' />
           <Plus className='icon' />
           <Copy className='icon' />
