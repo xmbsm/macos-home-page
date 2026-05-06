@@ -2,6 +2,8 @@
 
 一个 macOS 桌面体验的交互式网站，基于 React 构建。包含 Dock 栏、多窗口管理系统，以及音乐播放器、相册、终端等多个虚拟应用。
 
+![Portfolio Preview](./public/preview.png)
+
 ## 功能特性
 
 - **macOS 桌面体验** - 还原 macOS 窗口控制、Dock 栏与动画效果
