@@ -23,7 +23,7 @@ const About = () => {
           <Mail size={17} />
         </a>
       </div>
-      <div className='p-5 space-y-5'>
+      <div className='p-5 space-y-5 overflow-y-auto' style={{ maxHeight: 'calc(100% - 48px)' }}>
         <img
           src='/images/qtx.png'
           alt='QTX'
