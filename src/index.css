@@ -680,21 +680,20 @@ html body #root .rt-tooltip[data-tooltip-id="dock-tooltip"] .rt-tooltip-content 
       box-shadow: none !important;
     }
 
-      img {
-        @apply object-cover object-center;
-      }
+    .dock-icon img {
+      @apply object-cover object-center;
+    }
 
-      img[src*="music.webp"] {
-        @apply scale-93;
-      }
+    .dock-icon img[src*="music.webp"] {
+      @apply scale-93;
+    }
 
-      img[src*="trash.svg"] {
-        @apply scale-92;
-      }
+    .dock-icon img[src*="trash.svg"] {
+      @apply scale-92;
+    }
 
-      img[src*="game.svg"] {
-        @apply scale-100;
-      }
+    .dock-icon img[src*="game.svg"] {
+      @apply scale-100;
     }
   }
 
