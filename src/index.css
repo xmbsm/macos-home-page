@@ -668,6 +668,17 @@ html body #root .rt-tooltip[data-tooltip-id="dock-tooltip"] .rt-tooltip-content 
 
     .dock-icon {
       @apply size-14 3xl:size-20 cursor-pointer;
+      outline: none !important;
+      border: none !important;
+      background: transparent !important;
+    }
+
+    .dock-icon:focus,
+    .dock-icon:focus-visible,
+    .dock-icon:active {
+      outline: none !important;
+      box-shadow: none !important;
+    }
 
       img {
         @apply object-cover object-center;

@@ -268,6 +268,7 @@ const Dock = React.memo(() => {
                   onClick={(e) => {
                     e.stopPropagation();
                     toggleApp({id, canOpen, action});
+                    e.currentTarget.blur();
                   }}
                   onMouseEnter={isMobile ? undefined : (e) => {
                     const position = iconPositions.current[name] || e.currentTarget.getBoundingClientRect();

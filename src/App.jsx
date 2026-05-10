@@ -23,7 +23,7 @@ const VSCode = lazy(() => import('./windows/VSCode.jsx'))
 const Wallpaper = lazy(() => import('./windows/Wallpaper.jsx'))
 
 const App = () => {
-  const { windows } = useWindowStore();
+  const { windows, closeWindow } = useWindowStore();
   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' && window.innerWidth <= 640);
   
   useEffect(() => {
@@ -78,6 +78,29 @@ const App = () => {
       });
     }
   }, [isMobile]);
+  
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key !== 'Escape') return;
+      
+      const openWindows = Object.entries(windows)
+        .filter(([_, win]) => win?.isOpen && !win?.isMaximized);
+      
+      if (openWindows.length === 0) return;
+      
+      const topWindow = openWindows.reduce((top, current) => {
+        return !top || current[1].zIndex > top[1].zIndex ? current : top;
+      }, null);
+      
+      if (topWindow) {
+        closeWindow(topWindow[0]);
+        document.activeElement?.blur?.();
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [windows, closeWindow]);
   
   return (
     <>
